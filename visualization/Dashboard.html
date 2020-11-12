@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solar Network</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="logos/Logo.ico"/>
+    <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./charts.js"></script>
+    <script src="sketch.js"></script>
+</head>
+
+<body oncontextmenu="return false">
+<div class="SearchBar" id="SearchBar">
+    <p class="logo"><strong>LEVIATHAN</strong></p>
+    <div onclick="swap(this.id)" class="menu active" id="home">
+        <img class="logos" id="ho" src="logos/HomeWhite.svg" alt="logos">
+        <p>Home</p>
+    </div>
+    <div onclick="swap(this.id)" class="menu" id="dashboard">
+        <img class="logos" id="da" src="logos/Dashboard.svg" alt="logos">
+        <p>Dashboard</p>
+    </div>
+    <div onclick="swap(this.id)" class="menu" id="powerwall">
+        <img class="logos" id="po" src="logos/Powerwall.svg" alt="logos">
+        <p>Powerwall</p>
+    </div>
+    <div onclick="swap(this.id)" class="menu" id="workload">
+        <img class="logos" id="wo" src="logos/Workload.svg" alt="logos">
+        <p>Workload</p>
+    </div>
+    <div onclick="swap(this.id)" class="menu" id="analyse">
+        <img class="logos" id="an" src="logos/Analyse.svg" alt="logos">
+        <p>Analysis</p>
+    </div>
+    <div onclick="swap(this.id)" class="menu last" id="settings">
+        <img class="logos" id="se" src="logos/settings.svg" alt="logos">
+        <p>settings</p>
+    </div>
+</div>
+
+<div id="HomeBox">
+    <div class="box one">
+        <div class="boxes" id="Battery">
+            <h1>Battery</h1>
+            <hr class="boxesLine">
+            <div class="slave1">
+                <p class="greyText"><strong class="text">Temperature</strong>&nbsp; sensor 1</p>
+                <p class="textData" id="data">60%</p> <!-----------  Data input  -------------->
+                <progress class="line" id="myProgress" value="1" max="50"></progress>
+                <!--<div class="line"></div>
+                <div class="line line-data"></div> ---------  Data input  -------------->
+            </div>
+            <div class="slave">
+                <p class="greyText"><strong class="text">Temperature</strong>&nbsp; sensor 2</p>
+                <p class="textData" id="data1">24 V</p> <!-----------  Data input  -------------->
+                <progress class="line" id="myProgress2" value="1" max="50"></progress>
+                <!--<div class="line"></div>
+                <div class="line line-data"></div> ---------  Data input  -------------->
+            </div>
+            <div class="slave">
+                <p class="greyText"><strong class="text">Temperature</strong>&nbsp; sensor 3</p>
+                <p class="textData" id="data2">15 °C</p> <!-----------  Data input  -------------->
+                <progress class="line" id="myProgress3" value="1" max="50"></progress>
+                <!--<div class="line"></div>
+                <div class="line line-data"></div> ---------  Data input  -------------->
+            </div>
+        </div>
+
+        <div class="boxes" id="System">
+            <h1>System</h1>
+            <hr class="boxesLine">
+            <div class="slave1">
+                <p class="greyText"><strong class="text">Connection</strong>&nbsp; Connection online!</p>
+                <p class="textData">60%</p> <!-----------  Data input  -------------->
+                <div class="line"></div>
+                <div class="line line-data"></div> <!-----------  Data input  -------------->
+            </div>
+            <div class="slave">
+                <p class="greyText"><strong class="text">responsiveness</strong>&nbsp; very good!</p>
+                <p class="textData">60%</p> <!-----------  Data input  -------------->
+                <div class="line"></div>
+                <div class="line line-data"></div> <!-----------  Data input  -------------->
+            </div>
+            <div class="slave">
+                <p class="greyText"><strong class="text">Workload</strong>&nbsp; nothing to do!</p>
+                <p class="textData">60%</p> <!-----------  Data input  -------------->
+                <div class="line"></div>
+                <div class="line line-data"></div> <!-----------  Data input  -------------->
+            </div>
+        </div>
+
+        <div class="boxes" id="Balance">
+            <h1>Balance</h1>
+            <hr class="boxesLine">
+            <div class="slave1"></div>
+            <div class="slave"></div>
+            <div class="slave"></div>
+        </div>
+    </div>
+
+    <div class="box two">
+        <h1 class="headText">All Consumption</h1>
+        <h4 class="headTextSub">Your weekly Energy</h4>
+
+        <div class="ConsumptionData">
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>1</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>2</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>3</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>4</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>5</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>6</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>7</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>8</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>9</p>
+            </div>
+            <div class="weekData">
+                <hr class="Datelined v1"> <!-----------  Data input  -------------->
+                <hr class="Datelined v2"> <!-----------  Data input  -------------->
+                <hr class="Datelined v3"> <!-----------  Data input  -------------->
+                <p>10</p>
+            </div>
+        </div>
+        <div class="ConsumptionData Current-Phase2">
+            <div>
+                <h4 style="color:orange;">Generation</h4>
+                <h2>100<a> kWh</a></h2>
+            </div>
+            <div class="grid">
+                <h4 style="color: darkgray">Grid feed</h4>
+                <h2>399<a> kWh</a></h2>
+            </div>
+            <div class="con">
+                <h4 style="color:darkslategray;">Consumption</h4>
+                <h2>139<a> kWh</a></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="box three">
+        <h1 class="headText">Current flow</h1>
+        <h4 class="headTextSub">Your energy flow</h4>
+
+        <svg id="svg" viewbox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="rgba(213, 213, 213, 0.2)"></circle>
+            <path fill="none" stroke-linecap="round" stroke-width="5" stroke="orange"
+                  stroke-dasharray="200,250.2"
+                  d="M50 10
+           a 40 40 0 0 1 0 80
+           a 40 40 0 0 1 0 -80"></path>
+
+            <path fill="none" stroke-linecap="round" stroke-width="5" stroke="darkgray"
+                  stroke-dasharray="180,200.2"
+                  d="M50 20
+           a 20 20 0 0 1 0 60
+           a 20 20 0 0 1 0 -60"></path>
+
+            <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#071E2C"
+                  stroke-dasharray="50,150.2"
+                  d="M50 30
+           a 10 10 0 0 1 0 40
+           a 10 10 0 0 1 0 -40"></path>
+        </svg>
+
+        <div class="ConsumptionData Current">
+            <div class="gen">
+                <h4 style="color:orange;">Generation</h4>
+                <h2>100<a> kWh</a></h2>
+            </div>
+            <div class="grid">
+                <h4 style="color: darkgray">Grid feed</h4>
+                <h2>399<a> kWh</a></h2>
+            </div>
+            <div class="con">
+                <h4 style="color:darkslategray;">Consumption</h4>
+                <h2>139<a> kWh</a></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="DashBox">
+    <div class="box IIone">
+        <div class="chart">
+            <div class="graphs" id="first">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="graphs" id="second">
+                <canvas class="graphs" id="myChart2"></canvas>
+            </div>
+            <div class="graphs" id="third">
+                <canvas class="graphs" id="myChart3"></canvas>
+            </div>
+            <div class="graphs" id="fourth">
+                <canvas class="graphs" id="myChart4"></canvas>
+            </div>
+            <div class="graphs" id="fifth">
+                <canvas class="graphs" id="myChart5"></canvas>
+            </div>
+            <div class="graphs" id="sixth">
+                <canvas class="graphs" id="myChart6"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="IItwo">
+        <h1>Dashboard</h1>
+        <h3>Your Powerwall</h3>
+        <div class="II-two" id="IItwo">
+            <div onclick="swap(this.id)" class="boxD activeD first" id="consumption">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-ConsumptionB);
+                            }
+
+                            .cls-2 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: #707070;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-ConsumptionB">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="ConsumptionB" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <path id="Ausschluss_17" data-name="Ausschluss 17" class="cls-3" d="M-10387.5-9827a11.432,11.432,0,0,1-8.134-3.368,11.432,11.432,0,0,1-3.368-8.134,11.422,11.422,0,0,1,3.368-8.131,11.434,11.434,0,0,1,8.134-3.367,11.427,11.427,0,0,1,8.131,3.367,11.422,11.422,0,0,1,3.368,8.131,11.432,11.432,0,0,1-3.368,8.134A11.426,11.426,0,0,1-10387.5-9827Zm1.5-8a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h4.34a2.342,2.342,0,0,0,1.66-1.553V-9834a1,1,0,0,0-1-1Zm-8,0a1,1,0,0,0-1,1v1.362a2.437,2.437,0,0,0,1.632,1.639h4.368a1,1,0,0,0,1-1v-2a1,1,0,0,0-1-1Zm8-5a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1v-2a1,1,0,0,0-1-1Zm-8,0a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1v-2a1,1,0,0,0-1-1Zm8-5a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1v-1.345a2.357,2.357,0,0,0-1.582-1.654Zm-7.334-.154c-.572,0-1.665,1.313-1.665,1.851v1.3a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1v-2a1,1,0,0,0-1-1l-4.335-.154Z" transform="translate(10466 9921)"/>
+                        <path id="Pfad_305-2" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-3" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-3" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-3" d="M11.323,42.531H28.049a18.98,18.98,0,0,1,2.832-1.012,20.765,20.765,0,0,1,3.666-.531V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.531Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-3" d="M21.6,70.056H10.914a1.623,1.623,0,0,0-1.377,1.788V74.52a1.623,1.623,0,0,0,1.377,1.788H21.758a13.806,13.806,0,0,1-.424-3.439A14.945,14.945,0,0,1,21.6,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-3" d="M30.248,53.167h-13.7a1.623,1.623,0,0,0-1.377,1.788v2.676a1.623,1.623,0,0,0,1.377,1.788h9.082A10.556,10.556,0,0,1,30.248,53.167Z" transform="translate(-13.24 -30.657)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>Consumption</h3>
+                    <p>Current Resources</p>
+                </div>
+            </div>
+            <hr>
+            <div onclick="swap(this.id)" class="boxD" id="voltage">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-ConsumptionB-voltage);
+                            }
+
+                            .cls-2 {
+                                fill: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-ConsumptionB-voltage">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="ConsumptionB-voltage" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Ausschluss_14" data-name="Ausschluss 14" class="cls-2" d="M-10387.5-9994a11.437,11.437,0,0,1-8.134-3.367,11.426,11.426,0,0,1-3.368-8.131,11.432,11.432,0,0,1,3.368-8.134,11.432,11.432,0,0,1,8.134-3.368,11.426,11.426,0,0,1,8.131,3.368,11.432,11.432,0,0,1,3.368,8.134A11.512,11.512,0,0,1-10387.5-9994Zm-.5-7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1v-2a1,1,0,0,0-1-1Zm-4.773-5.134c-.24,0-.462.043-.462.355a3.706,3.706,0,0,0,.729,2.2c.933,1.249,2.626,1.882,5.033,1.882a6.175,6.175,0,0,0,4.521-1.468,3.877,3.877,0,0,0,1.112-2.722v-.013c0-.229-.21-.23-.379-.231h-.041c-.053,0-.976,0-2.744,0-3.045,0-7.533,0-7.533,0l-.111,0h-.04Zm.073-1.866a.3.3,0,0,0-.3.3v.4a.3.3,0,0,0,.3.3h10.4a.3.3,0,0,0,.3-.3v-.4a.3.3,0,0,0-.3-.3h-.7v-3a1,1,0,0,0-1-1,1,1,0,0,0-1,1v3h-5v-3a1,1,0,0,0-1-1,1,1,0,0,0-1,1v3Z" transform="translate(10466 10088)"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-3" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-2" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-2" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-2" d="M11.323,42.531H28.049a18.98,18.98,0,0,1,2.832-1.012,20.765,20.765,0,0,1,3.666-.531V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.531Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-2" d="M21.6,70.056H10.914a1.623,1.623,0,0,0-1.377,1.788V74.52a1.623,1.623,0,0,0,1.377,1.788H21.758a13.806,13.806,0,0,1-.424-3.439A14.945,14.945,0,0,1,21.6,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-2" d="M30.248,53.167h-13.7a1.623,1.623,0,0,0-1.377,1.788v2.676a1.623,1.623,0,0,0,1.377,1.788h9.082A10.556,10.556,0,0,1,30.248,53.167Z" transform="translate(-13.24 -30.657)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>Voltage</h3>
+                    <p>battery <strong>24.04 V</strong></p>
+                </div>
+            </div>
+            <hr>
+            <div onclick="swap(this.id)" class="boxD" id="sunshine">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-ConsumptionB-sunshine);
+                            }
+
+                            .cls-2 {
+                                fill: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-ConsumptionB-sunshine">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="ConsumptionB-sunshine" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Ausschluss_16" data-name="Ausschluss 16" class="cls-2" d="M-10387.5-10165a11.432,11.432,0,0,1-8.134-3.368,11.426,11.426,0,0,1-3.368-8.131,11.428,11.428,0,0,1,3.368-8.133,11.432,11.432,0,0,1,8.134-3.368,11.426,11.426,0,0,1,8.131,3.368,11.428,11.428,0,0,1,3.368,8.133A11.512,11.512,0,0,1-10387.5-10165Zm0-7a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1,1,1,0,0,0,1-1v-2A1,1,0,0,0-10387.5-10172Zm3.888-1.611a.988.988,0,0,0-.706.294,1,1,0,0,0,0,1.414l1.414,1.415a.992.992,0,0,0,.706.292.992.992,0,0,0,.706-.292,1,1,0,0,0,0-1.415l-1.412-1.414A.994.994,0,0,0-10383.611-10173.611Zm-7.778,0a.994.994,0,0,0-.708.294l-1.412,1.414a1,1,0,0,0,0,1.415.992.992,0,0,0,.706.292.992.992,0,0,0,.706-.292l1.414-1.415a1,1,0,0,0,0-1.414A.988.988,0,0,0-10391.39-10173.611Zm3.891-6.388a3.5,3.5,0,0,0-3.5,3.5,3.5,3.5,0,0,0,3.5,3.5,3.5,3.5,0,0,0,3.5-3.5A3.5,3.5,0,0,0-10387.5-10180Zm5.5,2.5a1,1,0,0,0-1,1,1,1,0,0,0,1,1h2a1,1,0,0,0,1-1,1,1,0,0,0-1-1Zm-13,0a1,1,0,0,0-1,1,1,1,0,0,0,1,1h2a1,1,0,0,0,1-1,1,1,0,0,0-1-1Zm12.8-5.3a.989.989,0,0,0-.706.293l-1.414,1.415a.992.992,0,0,0-.294.7,1,1,0,0,0,.294.71.992.992,0,0,0,.706.292,1,1,0,0,0,.708-.292l1.412-1.414a1,1,0,0,0,0-1.415A.989.989,0,0,0-10382.2-10182.8Zm-10.606,0a.989.989,0,0,0-.706.293.99.99,0,0,0-.293.708.989.989,0,0,0,.293.707l1.412,1.414a1,1,0,0,0,.708.292.992.992,0,0,0,.706-.292,1,1,0,0,0,.294-.71.992.992,0,0,0-.294-.7l-1.414-1.415A.989.989,0,0,0-10392.8-10182.8Zm5.3-2.2a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1,1,1,0,0,0,1-1v-2A1,1,0,0,0-10387.5-10185Z" transform="translate(10466 10259)"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-3" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-2" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-2" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-2" d="M11.323,42.531H28.049a18.98,18.98,0,0,1,2.832-1.012,20.765,20.765,0,0,1,3.666-.531V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.531Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-2" d="M21.6,70.056H10.914a1.623,1.623,0,0,0-1.377,1.788V74.52a1.623,1.623,0,0,0,1.377,1.788H21.758a13.806,13.806,0,0,1-.424-3.439A14.945,14.945,0,0,1,21.6,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-2" d="M30.248,53.167h-13.7a1.623,1.623,0,0,0-1.377,1.788v2.676a1.623,1.623,0,0,0,1.377,1.788h9.082A10.556,10.556,0,0,1,30.248,53.167Z" transform="translate(-13.24 -30.657)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>Suneshine</h3>
+                    <p>today <strong>4 hours</strong></p>
+                </div>
+            </div>
+            <hr>
+            <div onclick="swap(this.id)" class="boxD" id="money">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-Consumption);
+                            }
+
+                            .cls-2 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: #fff;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-Consumption">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Consumption" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-3" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-3" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-3" d="M11.323,42.53H32.761a1.786,1.786,0,0,0,1.786-1.786V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.53Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-3" d="M25.206,70.056H11.325a1.788,1.788,0,0,0-1.788,1.788V74.52a1.788,1.788,0,0,0,1.788,1.788H25.406a10.826,10.826,0,0,1-.55-3.439A11.635,11.635,0,0,1,25.206,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-3" d="M34.75,53.167H16.955a1.788,1.788,0,0,0-1.788,1.788v2.676a1.788,1.788,0,0,0,1.788,1.788H28.747A11.322,11.322,0,0,1,34.75,53.167Z" transform="translate(-12.666 -30.658)"/>
+                                <path id="Pfad_320" data-name="Pfad 320" class="cls-3" d="M58.357,55.315a7.281,7.281,0,0,0-.738-.038,9.35,9.35,0,0,0-8.441,5.315,7.257,7.257,0,0,0-.5,1.251,9.136,9.136,0,0,0-.438,2.814A9.007,9.007,0,0,0,48.9,68.1a9.374,9.374,0,1,0,9.454-12.78Zm.3,7.178a.377.377,0,0,1,.35.35v1.038a.365.365,0,0,1-.35.338H55.194v.875h3.464a.365.365,0,0,1,.35.338V66.47a.377.377,0,0,1-.35.35H55.719a1.723,1.723,0,0,0,.163.25,3.249,3.249,0,0,0,2.689,1.488,3.025,3.025,0,0,0,1.913-.7.372.372,0,0,1,.425,0l.963.875a.43.43,0,0,1,0,.6,5.259,5.259,0,0,1-3.551,1.388,5.33,5.33,0,0,1-4.5-2.626,5.991,5.991,0,0,1-.613-1.276h-.863a.377.377,0,0,1-.35-.35V65.432a.365.365,0,0,1,.35-.338h.513v-.875h-.513a.365.365,0,0,1-.35-.338V62.843a.4.4,0,0,1,.438-.35h.863a4.219,4.219,0,0,1,.275-.65,5.865,5.865,0,0,1,.788-1.251,5.225,5.225,0,0,1,4.052-2,.612.612,0,0,1,.15.012,5.157,5.157,0,0,1,3.314,1.376.344.344,0,0,1,0,.525l-.963.95a.37.37,0,0,1-.425,0,3.025,3.025,0,0,0-1.913-.7,3.31,3.31,0,0,0-2.851,1.738h2.939Z" transform="translate(-31.046 -31.831)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>Money</h3>
+                    <p>Upcoming <strong>soon</strong></p>
+                </div>
+            </div>
+            <hr>
+            <div onclick="swap(this.id)" class="boxD" id="co2">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-Consumption);
+                            }
+
+                            .cls-2 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: #fff;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-Consumption">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Consumption" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-3" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-3" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-3" d="M11.323,42.53H32.761a1.786,1.786,0,0,0,1.786-1.786V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.53Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-3" d="M25.206,70.056H11.325a1.788,1.788,0,0,0-1.788,1.788V74.52a1.788,1.788,0,0,0,1.788,1.788H25.406a10.826,10.826,0,0,1-.55-3.439A11.635,11.635,0,0,1,25.206,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-3" d="M34.75,53.167H16.955a1.788,1.788,0,0,0-1.788,1.788v2.676a1.788,1.788,0,0,0,1.788,1.788H28.747A11.322,11.322,0,0,1,34.75,53.167Z" transform="translate(-12.666 -30.658)"/>
+                                <path id="Pfad_320" data-name="Pfad 320" class="cls-3" d="M58.357,55.315a7.281,7.281,0,0,0-.738-.038,9.35,9.35,0,0,0-8.441,5.315,7.257,7.257,0,0,0-.5,1.251,9.136,9.136,0,0,0-.438,2.814A9.007,9.007,0,0,0,48.9,68.1a9.374,9.374,0,1,0,9.454-12.78Zm.3,7.178a.377.377,0,0,1,.35.35v1.038a.365.365,0,0,1-.35.338H55.194v.875h3.464a.365.365,0,0,1,.35.338V66.47a.377.377,0,0,1-.35.35H55.719a1.723,1.723,0,0,0,.163.25,3.249,3.249,0,0,0,2.689,1.488,3.025,3.025,0,0,0,1.913-.7.372.372,0,0,1,.425,0l.963.875a.43.43,0,0,1,0,.6,5.259,5.259,0,0,1-3.551,1.388,5.33,5.33,0,0,1-4.5-2.626,5.991,5.991,0,0,1-.613-1.276h-.863a.377.377,0,0,1-.35-.35V65.432a.365.365,0,0,1,.35-.338h.513v-.875h-.513a.365.365,0,0,1-.35-.338V62.843a.4.4,0,0,1,.438-.35h.863a4.219,4.219,0,0,1,.275-.65,5.865,5.865,0,0,1,.788-1.251,5.225,5.225,0,0,1,4.052-2,.612.612,0,0,1,.15.012,5.157,5.157,0,0,1,3.314,1.376.344.344,0,0,1,0,.525l-.963.95a.37.37,0,0,1-.425,0,3.025,3.025,0,0,0-1.913-.7,3.31,3.31,0,0,0-2.851,1.738h2.939Z" transform="translate(-31.046 -31.831)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>CO² saved</h3>
+                    <p>Upcoming <strong>soon</strong></p>
+                </div>
+            </div>
+            <hr>
+            <div onclick="swap(this.id)" class="boxD" id="System-">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-Consumption);
+                            }
+
+                            .cls-2 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: #fff;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-Consumption">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Consumption" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-3" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-3" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-3" d="M11.323,42.53H32.761a1.786,1.786,0,0,0,1.786-1.786V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.53Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-3" d="M25.206,70.056H11.325a1.788,1.788,0,0,0-1.788,1.788V74.52a1.788,1.788,0,0,0,1.788,1.788H25.406a10.826,10.826,0,0,1-.55-3.439A11.635,11.635,0,0,1,25.206,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-3" d="M34.75,53.167H16.955a1.788,1.788,0,0,0-1.788,1.788v2.676a1.788,1.788,0,0,0,1.788,1.788H28.747A11.322,11.322,0,0,1,34.75,53.167Z" transform="translate(-12.666 -30.658)"/>
+                                <path id="Pfad_320" data-name="Pfad 320" class="cls-3" d="M58.357,55.315a7.281,7.281,0,0,0-.738-.038,9.35,9.35,0,0,0-8.441,5.315,7.257,7.257,0,0,0-.5,1.251,9.136,9.136,0,0,0-.438,2.814A9.007,9.007,0,0,0,48.9,68.1a9.374,9.374,0,1,0,9.454-12.78Zm.3,7.178a.377.377,0,0,1,.35.35v1.038a.365.365,0,0,1-.35.338H55.194v.875h3.464a.365.365,0,0,1,.35.338V66.47a.377.377,0,0,1-.35.35H55.719a1.723,1.723,0,0,0,.163.25,3.249,3.249,0,0,0,2.689,1.488,3.025,3.025,0,0,0,1.913-.7.372.372,0,0,1,.425,0l.963.875a.43.43,0,0,1,0,.6,5.259,5.259,0,0,1-3.551,1.388,5.33,5.33,0,0,1-4.5-2.626,5.991,5.991,0,0,1-.613-1.276h-.863a.377.377,0,0,1-.35-.35V65.432a.365.365,0,0,1,.35-.338h.513v-.875h-.513a.365.365,0,0,1-.35-.338V62.843a.4.4,0,0,1,.438-.35h.863a4.219,4.219,0,0,1,.275-.65,5.865,5.865,0,0,1,.788-1.251,5.225,5.225,0,0,1,4.052-2,.612.612,0,0,1,.15.012,5.157,5.157,0,0,1,3.314,1.376.344.344,0,0,1,0,.525l-.963.95a.37.37,0,0,1-.425,0,3.025,3.025,0,0,0-1.913-.7,3.31,3.31,0,0,0-2.851,1.738h2.939Z" transform="translate(-31.046 -31.831)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>System</h3>
+                    <p>Upcoming <strong>soon</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="PowerBox">
+    <div class="box one">
+        <div class="PowerStatus" id="PowerStatus">
+            <div class="power"></div>
+
+            <div class="line-Power">
+                <div class="line-Power-color"></div>
+            </div>
+
+            <div class="line-Power sec">
+                <div class="line-Power-color gh"></div>
+            </div>
+
+        </div>
+
+        <div class="PowerDash" id="PowerDash">
+            <div onclick="swap2(this.id)" class="Dash" id="solarpanel">
+                <h2>84.04 V</h2>
+                <h4>Solarpanel Voltage</h4>
+
+                <div class="information">
+                    <h2>72.54 V</h2>
+                    <h4>min. Voltage</h4>
+                </div>
+                <div class="information mi">
+                    <h2>90.54 V</h2>
+                    <h4>Max. Voltage</h4>
+                </div>
+                <div class="information nzxt">
+                    <h2>99 %</h2>
+                    <h4>Lifetime</h4>
+                </div>
+
+                <div class="charts">
+                    <canvas id="myChart7"></canvas>
+                </div>
+            </div>
+
+            <div onclick="swap2(this.id)" class="Dash" id="batteryVolt">
+                <h2>23.04 V</h2>
+                <h4>Battery Voltage</h4>
+
+                <div class="information">
+                    <h2>20.54 V</h2>
+                    <h4>min. Voltage</h4>
+                </div>
+                <div class="information mi">
+                    <h2>24.54 V</h2>
+                    <h4>Max. Voltage</h4>
+                </div>
+                <div class="information nzxt">
+                    <h2>100 %</h2>
+                    <h4>Lifetime</h4>
+                </div>
+                <div class="charts">
+                    <canvas id="myChart8"></canvas>
+                </div>
+            </div>
+
+            <div onclick="swap2(this.id)" class="Dash" id="usage">
+                <h2>30 %</h2>
+                <h4 style="color: orange">Usage</h4>
+
+                <div class="information">
+                    <h2>72.54 V</h2>
+                    <h4>min. Voltage</h4>
+                </div>
+                <div class="information mi">
+                    <h2>90.54 V</h2>
+                    <h4>Max. Voltage</h4>
+                </div>
+                <div class="information nzxt">
+                    <h2>99 %</h2>
+                    <h4>Lifetime</h4>
+                </div>
+
+                <div class="charts">
+                    <canvas id="myChart9"></canvas>
+                </div>
+            </div>
+
+            <div onclick="swap2(this.id)" class="Dash" id="batteryCap">
+                <h2>60 %</h2>
+                <h4 style="color: #5dc6ff">Battery</h4>
+
+                <div class="information">
+                    <h2>60.0 Ah</h2>
+                    <h4>Capacity</h4>
+                </div>
+                <div class="information mi">
+                    <h2>30 A</h2>
+                    <h4>Current Ampere</h4>
+                </div>
+                <div class="information nzxt">
+                    <h2>99 %</h2>
+                    <h4>Lifetime</h4>
+                </div>
+
+                <div class="charts">
+                    <canvas id="myChart10"></canvas>
+                </div>
+            </div>
+
+        </div>
+        <div onclick="back()" class="PowerDashButton" id="bu"><p>Back</p></div>
+    </div>
+
+    <div class="box two">
+        <h1>Solarpanels</h1>
+        <h3>Current Energy</h3>
+        <div class="solars">
+            <div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+                <div class="to"></div>
+                <div class="sp to"></div>
+                <div class="to"></div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+            </div>
+            <p class="panels">Panel 1</p>
+            <p><strong>240 Watt</strong><br><strong>45 Volt</strong></p>
+        </div>
+        <div class="solars gi">
+            <div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+                <div class="to"></div>
+                <div class="sp to"></div>
+                <div class="to"></div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+            </div>
+            <p class="panels">Panel 2</p>
+            <p><strong>240 Watt</strong><br><strong>45 Volt</strong></p>
+        </div>
+        <div class="solars gi2">
+            <div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+                <div class="to"></div>
+                <div class="sp to"></div>
+                <div class="to"></div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+            </div>
+            <p class="panels">Panel 3</p>
+            <p><strong>240 Watt</strong><br><strong>45 Volt</strong></p>
+        </div>
+        <div class="solars gi3">
+            <div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+                <div class="to"></div>
+                <div class="sp to"></div>
+                <div class="to"></div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+            </div>
+            <p class="panels">Panel 4</p>
+            <p><strong>240 Watt</strong><br><strong>45 Volt</strong></p>
+        </div>
+        <div class="solars gi4">
+            <div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+                <div class="to"></div>
+                <div class="sp to"></div>
+                <div class="to"></div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+            </div>
+            <p class="panels">Panel 5</p>
+            <p><strong>240 Watt</strong><br><strong>45 Volt</strong></p>
+        </div>
+        <div class="solars gi5">
+            <div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+                <div class="to"></div>
+                <div class="sp to"></div>
+                <div class="to"></div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+            </div>
+            <p class="panels">Panel 6</p>
+            <p><strong>240 Watt</strong><br><strong>45 Volt</strong></p>
+        </div>
+        <div class="solars gi6">
+            <div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+                <div class="to"></div>
+                <div class="sp to"></div>
+                <div class="to"></div>
+                <div></div>
+                <div class="sp"></div>
+                <div></div>
+            </div>
+            <p class="panels">Panel 6</p>
+            <p><strong>240 Watt</strong><br><strong>45 Volt</strong></p>
+        </div>
+    </div>
+</div>
+
+<div id="analyseBox">
+    <div class="bj">
+        <div class="analyseBoxes">
+            <div class="chart">
+                <div class="graphs ghg">
+                    <canvas id="myChart-analyse"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="analyseBoxes">
+            <div class="chart">
+                <div class="graphs ghg">
+                    <canvas id="myChart-analyse-2"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="analyseBoxes"></div>
+    </div>
+
+    <div class="IItwo">
+        <h1>Analyse</h1>
+        <h3>analyse Powerwall</h3>
+        <div class="II-two" id="II-two-analyse">
+            <div class="boxD first activeD">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-Consumption);
+                            }
+
+                            .cls-2 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: #fff;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-Consumption">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Consumption" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-3" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-3" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-3" d="M11.323,42.53H32.761a1.786,1.786,0,0,0,1.786-1.786V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.53Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-3" d="M25.206,70.056H11.325a1.788,1.788,0,0,0-1.788,1.788V74.52a1.788,1.788,0,0,0,1.788,1.788H25.406a10.826,10.826,0,0,1-.55-3.439A11.635,11.635,0,0,1,25.206,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-3" d="M34.75,53.167H16.955a1.788,1.788,0,0,0-1.788,1.788v2.676a1.788,1.788,0,0,0,1.788,1.788H28.747A11.322,11.322,0,0,1,34.75,53.167Z" transform="translate(-12.666 -30.658)"/>
+                                <path id="Pfad_320" data-name="Pfad 320" class="cls-3" d="M58.357,55.315a7.281,7.281,0,0,0-.738-.038,9.35,9.35,0,0,0-8.441,5.315,7.257,7.257,0,0,0-.5,1.251,9.136,9.136,0,0,0-.438,2.814A9.007,9.007,0,0,0,48.9,68.1a9.374,9.374,0,1,0,9.454-12.78Zm.3,7.178a.377.377,0,0,1,.35.35v1.038a.365.365,0,0,1-.35.338H55.194v.875h3.464a.365.365,0,0,1,.35.338V66.47a.377.377,0,0,1-.35.35H55.719a1.723,1.723,0,0,0,.163.25,3.249,3.249,0,0,0,2.689,1.488,3.025,3.025,0,0,0,1.913-.7.372.372,0,0,1,.425,0l.963.875a.43.43,0,0,1,0,.6,5.259,5.259,0,0,1-3.551,1.388,5.33,5.33,0,0,1-4.5-2.626,5.991,5.991,0,0,1-.613-1.276h-.863a.377.377,0,0,1-.35-.35V65.432a.365.365,0,0,1,.35-.338h.513v-.875h-.513a.365.365,0,0,1-.35-.338V62.843a.4.4,0,0,1,.438-.35h.863a4.219,4.219,0,0,1,.275-.65,5.865,5.865,0,0,1,.788-1.251,5.225,5.225,0,0,1,4.052-2,.612.612,0,0,1,.15.012,5.157,5.157,0,0,1,3.314,1.376.344.344,0,0,1,0,.525l-.963.95a.37.37,0,0,1-.425,0,3.025,3.025,0,0,0-1.913-.7,3.31,3.31,0,0,0-2.851,1.738h2.939Z" transform="translate(-31.046 -31.831)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>Consumption</h3>
+                    <p>Current Resources</p>
+                </div>
+            </div>
+            <hr>
+            <div class="boxD">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-Consumption);
+                            }
+
+                            .cls-2 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: #fff;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-Consumption">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Consumption" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-3" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-3" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-3" d="M11.323,42.53H32.761a1.786,1.786,0,0,0,1.786-1.786V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.53Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-3" d="M25.206,70.056H11.325a1.788,1.788,0,0,0-1.788,1.788V74.52a1.788,1.788,0,0,0,1.788,1.788H25.406a10.826,10.826,0,0,1-.55-3.439A11.635,11.635,0,0,1,25.206,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-3" d="M34.75,53.167H16.955a1.788,1.788,0,0,0-1.788,1.788v2.676a1.788,1.788,0,0,0,1.788,1.788H28.747A11.322,11.322,0,0,1,34.75,53.167Z" transform="translate(-12.666 -30.658)"/>
+                                <path id="Pfad_320" data-name="Pfad 320" class="cls-3" d="M58.357,55.315a7.281,7.281,0,0,0-.738-.038,9.35,9.35,0,0,0-8.441,5.315,7.257,7.257,0,0,0-.5,1.251,9.136,9.136,0,0,0-.438,2.814A9.007,9.007,0,0,0,48.9,68.1a9.374,9.374,0,1,0,9.454-12.78Zm.3,7.178a.377.377,0,0,1,.35.35v1.038a.365.365,0,0,1-.35.338H55.194v.875h3.464a.365.365,0,0,1,.35.338V66.47a.377.377,0,0,1-.35.35H55.719a1.723,1.723,0,0,0,.163.25,3.249,3.249,0,0,0,2.689,1.488,3.025,3.025,0,0,0,1.913-.7.372.372,0,0,1,.425,0l.963.875a.43.43,0,0,1,0,.6,5.259,5.259,0,0,1-3.551,1.388,5.33,5.33,0,0,1-4.5-2.626,5.991,5.991,0,0,1-.613-1.276h-.863a.377.377,0,0,1-.35-.35V65.432a.365.365,0,0,1,.35-.338h.513v-.875h-.513a.365.365,0,0,1-.35-.338V62.843a.4.4,0,0,1,.438-.35h.863a4.219,4.219,0,0,1,.275-.65,5.865,5.865,0,0,1,.788-1.251,5.225,5.225,0,0,1,4.052-2,.612.612,0,0,1,.15.012,5.157,5.157,0,0,1,3.314,1.376.344.344,0,0,1,0,.525l-.963.95a.37.37,0,0,1-.425,0,3.025,3.025,0,0,0-1.913-.7,3.31,3.31,0,0,0-2.851,1.738h2.939Z" transform="translate(-31.046 -31.831)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>Powerwall</h3>
+                    <p>Your Data</p>
+                </div>
+            </div>
+            <hr>
+            <div class="boxD">
+                <svg class="logosD" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                clip-path: url(#clip-Consumption);
+                            }
+
+                            .cls-2 {
+                                fill: none;
+                                stroke: #707070;
+                            }
+
+                            .cls-3 {
+                                fill: #fff;
+                            }
+
+                            .cls-4 {
+                                fill: rgba(237,237,237,0);
+                            }
+                        </style>
+                        <clipPath id="clip-Consumption">
+                            <rect width="140" height="140"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Consumption" class="cls-1">
+                        <rect class="cls-4" width="140" height="140"/>
+                        <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+                        <g id="noun_Money_3162552" transform="translate(52.187 49)">
+                            <g id="Gruppe_101" data-name="Gruppe 101">
+                                <path id="Pfad_315" data-name="Pfad 315" class="cls-3" d="M11.323,8.753H32.761a1.786,1.786,0,0,0,1.786-1.786V4.286A1.786,1.786,0,0,0,32.761,2.5H11.323A1.786,1.786,0,0,0,9.537,4.286V6.967A1.786,1.786,0,0,0,11.323,8.753Z" transform="translate(-9.537 -2.5)"/>
+                                <path id="Pfad_316" data-name="Pfad 316" class="cls-3" d="M15.167,21.175v2.681a1.786,1.786,0,0,0,1.786,1.786H38.391a1.786,1.786,0,0,0,1.786-1.786V21.175a1.786,1.786,0,0,0-1.786-1.786H16.953A1.786,1.786,0,0,0,15.167,21.175Z" transform="translate(-12.666 -11.886)"/>
+                                <path id="Pfad_317" data-name="Pfad 317" class="cls-3" d="M11.323,42.53H32.761a1.786,1.786,0,0,0,1.786-1.786V38.064a1.786,1.786,0,0,0-1.786-1.786H11.323a1.786,1.786,0,0,0-1.786,1.786v2.681A1.786,1.786,0,0,0,11.323,42.53Z" transform="translate(-9.537 -21.272)"/>
+                                <path id="Pfad_318" data-name="Pfad 318" class="cls-3" d="M25.206,70.056H11.325a1.788,1.788,0,0,0-1.788,1.788V74.52a1.788,1.788,0,0,0,1.788,1.788H25.406a10.826,10.826,0,0,1-.55-3.439A11.635,11.635,0,0,1,25.206,70.056Z" transform="translate(-9.537 -40.043)"/>
+                                <path id="Pfad_319" data-name="Pfad 319" class="cls-3" d="M34.75,53.167H16.955a1.788,1.788,0,0,0-1.788,1.788v2.676a1.788,1.788,0,0,0,1.788,1.788H28.747A11.322,11.322,0,0,1,34.75,53.167Z" transform="translate(-12.666 -30.658)"/>
+                                <path id="Pfad_320" data-name="Pfad 320" class="cls-3" d="M58.357,55.315a7.281,7.281,0,0,0-.738-.038,9.35,9.35,0,0,0-8.441,5.315,7.257,7.257,0,0,0-.5,1.251,9.136,9.136,0,0,0-.438,2.814A9.007,9.007,0,0,0,48.9,68.1a9.374,9.374,0,1,0,9.454-12.78Zm.3,7.178a.377.377,0,0,1,.35.35v1.038a.365.365,0,0,1-.35.338H55.194v.875h3.464a.365.365,0,0,1,.35.338V66.47a.377.377,0,0,1-.35.35H55.719a1.723,1.723,0,0,0,.163.25,3.249,3.249,0,0,0,2.689,1.488,3.025,3.025,0,0,0,1.913-.7.372.372,0,0,1,.425,0l.963.875a.43.43,0,0,1,0,.6,5.259,5.259,0,0,1-3.551,1.388,5.33,5.33,0,0,1-4.5-2.626,5.991,5.991,0,0,1-.613-1.276h-.863a.377.377,0,0,1-.35-.35V65.432a.365.365,0,0,1,.35-.338h.513v-.875h-.513a.365.365,0,0,1-.35-.338V62.843a.4.4,0,0,1,.438-.35h.863a4.219,4.219,0,0,1,.275-.65,5.865,5.865,0,0,1,.788-1.251,5.225,5.225,0,0,1,4.052-2,.612.612,0,0,1,.15.012,5.157,5.157,0,0,1,3.314,1.376.344.344,0,0,1,0,.525l-.963.95a.37.37,0,0,1-.425,0,3.025,3.025,0,0,0-1.913-.7,3.31,3.31,0,0,0-2.851,1.738h2.939Z" transform="translate(-31.046 -31.831)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                    <h3>Money</h3>
+                    <p>your Data</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Work">
+            <div class="boxD first">
+                <img class="logosD" src="logos/Work.svg" alt="logos">
+                <div>
+                    <h3>Powerwall</h3>
+                    <p>Workload okey</p>
+                </div>
+            </div>
+            <hr>
+            <div class="boxD">
+                <img class="logosD" src="logos/Work.svg" alt="logos">
+                <div>
+                    <h3>System</h3>
+                    <p>Next check in 2h</p>
+                </div>
+            </div>
+            <hr>
+            <div class="boxD">
+                <img class="logosD" src="logos/Work.svg" alt="logos">
+                <div>
+                    <h3>Maintences</h3>
+                    <p>Maintence in 5h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="settingBox">
+    <div class="box sett">
+        <h2 class="profileHeader">System</h2>
+        <div>
+            <div class="profile"><p class="pp">Background mode</p></div>
+            <div class="profile"><p class="pp">Maintence status</p></div>
+            <div class="profile"><p class="pp">Power status</p></div>
+        </div>
+    </div>
+    <div class="box sett2">
+        <h2 class="profileHeader">Pin assignment</h2>
+        <div>
+            <div class="profile"><p class="pp2">Temperature</p></div>
+            <div class="profile"><p class="pp2">Solar voltage</p></div>
+            <div class="profile"><p class="pp2">Battery voltage</p></div>
+            <div class="profile"><p class="pp2">Fan</p></div>
+            <div class="profile"><p class="pp2">Fan</p></div>
+        </div>
+    </div>
+    <div class="box sett3">
+        <div class="profile-Pic"></div>
+        <div class="profile"></div>
+        <div class="profile"></div>
+        <div class="profile"></div>
+    </div>
+</div>
+
+<script src="interaction.js"></script>
+</body>
+</html>

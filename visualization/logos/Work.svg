@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Work);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #707070;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: rgba(237,237,237,0);
+      }
+    </style>
+    <clipPath id="clip-Work">
+      <rect width="140" height="140"/>
+    </clipPath>
+  </defs>
+  <g id="Work" class="cls-1">
+    <rect class="cls-4" width="140" height="140"/>
+    <path id="Pfad_305" data-name="Pfad 305" class="cls-2" d="M10013.474,9899.924" transform="translate(-9949 -9850)"/>
+    <g id="noun_done_1543594" transform="translate(40.634 41.58)">
+      <g id="Gruppe_102" data-name="Gruppe 102">
+        <path id="Pfad_323" data-name="Pfad 323" class="cls-3" d="M68.467,20.054,39.834,46.189l-10.4-11.345a2.726,2.726,0,1,0-4.052,3.647L37.605,51.862a2.787,2.787,0,0,0,3.849.2l30.66-28.026a2.82,2.82,0,0,0,.2-3.849A2.751,2.751,0,0,0,68.467,20.054Z" transform="translate(-13.429 -11.68)"/>
+        <path id="Pfad_324" data-name="Pfad 324" class="cls-3" d="M36.363,64.727A28.36,28.36,0,0,0,64.727,36.363a24.887,24.887,0,0,0-.27-3.917,2.693,2.693,0,1,0-5.335.743,25.857,25.857,0,0,1,.2,3.174,22.97,22.97,0,1,1-8.171-17.558A2.685,2.685,0,0,0,54.6,14.686,28.348,28.348,0,1,0,36.363,64.727Z" transform="translate(-8 -8)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-analyseWhite);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #ff9100;
+      }
+
+      .cls-2 {
+        opacity: 0.17;
+      }
+
+      .cls-3 {
+        opacity: 0.4;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: rgba(237,237,237,0);
+      }
+
+      .cls-7 {
+        filter: url(#Rechteck_1706);
+      }
+
+      .cls-8 {
+        filter: url(#Rechteck_1705);
+      }
+
+      .cls-9 {
+        filter: url(#Rechteck_1704);
+      }
+
+      .cls-10 {
+        filter: url(#Rechteck_1703);
+      }
+    </style>
+    <filter id="Rechteck_1703" x="32" y="55" width="29" height="60" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1704" x="47" y="32" width="29" height="83" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1705" x="63" y="45" width="29" height="70" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1706" x="79" y="70" width="29" height="45" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-analyseWhite">
+      <rect width="140" height="140"/>
+    </clipPath>
+  </defs>
+  <g id="analyseWhite" class="cls-1">
+    <rect class="cls-6" width="140" height="140"/>
+    <path id="Polygon_4" data-name="Polygon 4" class="cls-2" d="M53.8,0a3,3,0,0,1,2.576,1.463l16.71,28a3,3,0,0,1,0,3.075l-16.71,28A3,3,0,0,1,53.8,62H20.2a3,3,0,0,1-2.576-1.463l-16.71-28a3,3,0,0,1,0-3.075l16.71-28A3,3,0,0,1,20.2,0Z" transform="matrix(-0.259, 0.966, -0.966, -0.259, 116.773, 39.104)"/>
+    <path id="Polygon_3" data-name="Polygon 3" class="cls-3" d="M51.554,0a3,3,0,0,1,2.571,1.453l15.945,26.5a3,3,0,0,1,0,3.093l-15.945,26.5A3,3,0,0,1,51.554,59H19.446a3,3,0,0,1-2.571-1.453L.931,31.047a3,3,0,0,1,0-3.093l15.945-26.5A3,3,0,0,1,19.446,0Z" transform="translate(107.951 28.561) rotate(90)"/>
+    <path id="Polygon_2" data-name="Polygon 2" class="cls-4" d="M48.549,0a3,3,0,0,1,2.575,1.46l14.955,25a3,3,0,0,1,0,3.08l-14.955,25A3,3,0,0,1,48.549,56h-30.1a3,3,0,0,1-2.575-1.46L.921,29.54a3,3,0,0,1,0-3.08l14.955-25A3,3,0,0,1,18.451,0Z" transform="matrix(0.259, 0.966, -0.966, 0.259, 97.788, 20.869)"/>
+    <g class="cls-10" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1703-2" data-name="Rechteck 1703" class="cls-5" width="11" height="42" rx="3" transform="translate(52 103) rotate(180)"/>
+    </g>
+    <g class="cls-9" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1704-2" data-name="Rechteck 1704" class="cls-5" width="11" height="65" rx="3" transform="translate(67 103) rotate(180)"/>
+    </g>
+    <g class="cls-8" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1705-2" data-name="Rechteck 1705" class="cls-5" width="11" height="52" rx="3" transform="translate(83 103) rotate(180)"/>
+    </g>
+    <g class="cls-7" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1706-2" data-name="Rechteck 1706" class="cls-5" width="11" height="27" rx="3" transform="translate(99 103) rotate(180)"/>
+    </g>
+  </g>
+</svg>

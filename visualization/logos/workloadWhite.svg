@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-workloadWhite);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #ff9100;
+      }
+
+      .cls-2 {
+        opacity: 0.17;
+      }
+
+      .cls-3 {
+        opacity: 0.4;
+      }
+
+      .cls-5 {
+        fill: #b9b9b9;
+      }
+
+      .cls-5, .cls-6 {
+        opacity: 0.31;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-8 {
+        fill: rgba(237,237,237,0);
+      }
+
+      .cls-9 {
+        filter: url(#Rechteck_1702);
+      }
+
+      .cls-10 {
+        filter: url(#Rechteck_1558);
+      }
+
+      .cls-11 {
+        filter: url(#Rechteck_1557);
+      }
+
+      .cls-12 {
+        filter: url(#Rechteck_1556);
+      }
+
+      .cls-13 {
+        filter: url(#Rechteck_1555);
+      }
+
+      .cls-14 {
+        filter: url(#Rechteck_1554);
+      }
+
+      .cls-15 {
+        filter: url(#Rechteck_1553);
+      }
+
+      .cls-16 {
+        filter: url(#Rechteck_1552);
+      }
+
+      .cls-17 {
+        filter: url(#Rechteck_1551);
+      }
+    </style>
+    <filter id="Rechteck_1551" x="85" y="49" width="33" height="29" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1552" x="22" y="75" width="33" height="28" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1553" x="68.5" y="88.5" width="28" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1554" x="42.5" y="24.5" width="27" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1555" x="23" y="49" width="32" height="27" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1556" x="85" y="71" width="33" height="27" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1557" x="70" y="24" width="27" height="34" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1558" x="42" y="88" width="28" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1702" x="64" y="62" width="41" height="48" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-9"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-workloadWhite">
+      <rect width="140" height="140"/>
+    </clipPath>
+  </defs>
+  <g id="workloadWhite" class="cls-1">
+    <rect class="cls-8" width="140" height="140"/>
+    <path id="Polygon_5" data-name="Polygon 5" class="cls-2" d="M53.8,0a3,3,0,0,1,2.576,1.463l16.71,28a3,3,0,0,1,0,3.075l-16.71,28A3,3,0,0,1,53.8,62H20.2a3,3,0,0,1-2.576-1.463l-16.71-28a3,3,0,0,1,0-3.075l16.71-28A3,3,0,0,1,20.2,0Z" transform="translate(32.448 34.524) rotate(-7)"/>
+    <path id="Polygon_6" data-name="Polygon 6" class="cls-3" d="M51.554,0a3,3,0,0,1,2.571,1.453l15.945,26.5a3,3,0,0,1,0,3.093l-15.945,26.5A3,3,0,0,1,51.554,59H19.446a3,3,0,0,1-2.571-1.453L.931,31.047a3,3,0,0,1,0-3.093l15.945-26.5A3,3,0,0,1,19.446,0Z" transform="translate(25.977 46.653) rotate(-22)"/>
+    <path id="Polygon_7" data-name="Polygon 7" class="cls-4" d="M48.549,0a3,3,0,0,1,2.575,1.46l14.955,25a3,3,0,0,1,0,3.08l-14.955,25A3,3,0,0,1,48.549,56h-30.1a3,3,0,0,1-2.575-1.46L.921,29.54a3,3,0,0,1,0-3.08l14.955-25A3,3,0,0,1,18.451,0Z" transform="translate(22.653 58.958) rotate(-37)"/>
+    <g class="cls-17" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1551-2" data-name="Rechteck 1551" class="cls-5" width="15" height="11" rx="0.5" transform="translate(94 55)"/>
+    </g>
+    <g class="cls-16" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1552-2" data-name="Rechteck 1552" class="cls-5" width="15" height="10" rx="0.5" transform="translate(31 81)"/>
+    </g>
+    <g class="cls-15" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1553-2" data-name="Rechteck 1553" class="cls-5" width="15" height="10" rx="0.5" transform="translate(87.5 94.5) rotate(90)"/>
+    </g>
+    <g class="cls-14" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1554-2" data-name="Rechteck 1554" class="cls-5" width="15" height="9" rx="0.5" transform="translate(60.5 30.5) rotate(90)"/>
+    </g>
+    <g class="cls-13" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1555-2" data-name="Rechteck 1555" class="cls-6" width="14" height="9" rx="0.5" transform="translate(32 55)"/>
+    </g>
+    <g class="cls-12" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1556-2" data-name="Rechteck 1556" class="cls-6" width="15" height="9" rx="0.5" transform="translate(94 77)"/>
+    </g>
+    <g class="cls-11" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1557-2" data-name="Rechteck 1557" class="cls-6" width="16" height="9" rx="0.5" transform="translate(88 30) rotate(90)"/>
+    </g>
+    <g class="cls-10" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1558-2" data-name="Rechteck 1558" class="cls-6" width="15" height="10" rx="0.5" transform="translate(61 94) rotate(90)"/>
+    </g>
+    <path id="Pfad_307" data-name="Pfad 307" class="cls-7" d="M9625.055,10393.153v42.229a2.313,2.313,0,0,0,2.318,2.31h22.648a1.613,1.613,0,0,0,1.725-1.823v-29.14s-.11-1.029,1.271-1.029h23.207a1.627,1.627,0,0,0,1.776-1.745v-18.524s-.029-2.128-1.776-2.128h-42.209C9624.646,10383.3,9625.52,10385.007,9625.055,10393.153Z" transform="translate(-9582 -10340)"/>
+    <g class="cls-9" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1702-2" data-name="Rechteck 1702" class="cls-7" width="23" height="30" rx="3" transform="translate(96 98) rotate(180)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,883 @@
+/***************** Document setting *********************/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #EDEDED;
+    position: relative;
+}
+
+.bj::-webkit-scrollbar {
+    width: 1px;
+}
+
+.bj::-webkit-scrollbar-thumb {
+    background-color: #EDEDED;
+}
+
+/****************** Menu list  ***********************/
+.SearchBar {
+    position: relative;
+    width: 15%;
+    height: 100vh;
+    background-color: transparent;
+    color: black;
+    border-right: 1px solid #d6d6d6;
+}
+
+.logo {
+    margin-top: 0;
+    padding-bottom: 70px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.logos {
+    width: auto;
+    height: 100%;
+    float: left;
+    margin-left: 20%;
+}
+
+.menu {
+    width: 100%;
+    height: 60px;
+    margin: 20px 0 20px 0;
+    transition: all 0.6s ease;
+
+    background: #EDEDED;
+    /* Old browsers */
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.51) 50%, #EDEDED 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+}
+
+.menu p {
+    float: left;
+    font-size: 15px;
+    margin-top: 22.5px;
+}
+
+/******** active button *******/
+.active {
+    width: 100%;
+    background: #071E2C;
+    border-right: 4px solid orange;
+    color: white;
+    font-weight: bold;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.last {
+    position: absolute;
+    bottom: 10px;
+}
+
+.menu:not(.active):hover {
+    color: #FFA100;
+    cursor: pointer;
+    background-position: right bottom;
+}
+
+/***************************** Boxes *****************************/
+#HomeBox, #DashBox, #PowerBox, #settingBox, #analyseBox {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    top: 5%;
+    right: 2.5%;
+    transition: all 0.5s ease-in-out;
+}
+
+.box {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.boxes h1 {
+    position: absolute;
+    margin: 2% 0 0 4%;
+    color: #b1b1b1;
+}
+
+.boxesLine {
+    right: 2.5%;
+    top: 5%;
+    position: absolute;
+    width: 60%;
+    border: 0.5px solid orange;
+
+}
+
+.boxes {
+    position: relative;
+    float: left;
+    width: 32%;
+    height: 42vh;
+    margin-left: 1%;
+    margin-top: 1.25%;
+    background-color: rgba(170, 170, 170, 0); /*orientation - delete*/
+    border-radius: 10px;
+}
+
+.slave, .slave1 {
+    position: relative;
+    margin-top: 1.75vh;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(170, 170, 170, 0.08);
+    border-radius: 10px;
+}
+
+.slave1 {
+    margin-top: 8vh;
+}
+
+.greyText {
+    position: absolute;
+    margin-top: 3vh;
+    margin-left: 5%;
+    color: #00bce1;
+}
+
+.textData {
+    position: absolute;
+    right: 5%;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 2vh;
+}
+
+.text, .headTextSub, .textData {
+    color: #071E2C;
+}
+
+.line {
+    position: absolute;
+    margin-top: 7vh;
+    margin-left: 5%;
+    width: 90%;
+    height: 8px;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+}
+
+Progress{
+    border-radius: 5px;
+    color: lightgray;
+}
+
+progress::-webkit-progress-value {
+    background: orange;
+  }
+  
+.line-data {
+    width: 30%;
+    background-color: orange;
+}
+
+.headText {
+    margin-top: 2vh;
+    margin-bottom: 0;
+    margin-left: 1.5vw;
+    color: #b1b1b1;
+}
+
+.headTextSub {
+    margin-left: 1.5vw;
+    margin-top: 0;
+}
+
+/************* - BOX ONE - ****************/
+.one {
+    width: 100%;
+    height: 45vh;
+}
+
+/************* - BOX TWO - ****************/
+.two {
+    width: 62%;
+    height: 42vh;
+    bottom: 0;
+}
+
+.ConsumptionData {
+    /*position: relative;*/
+    width: auto;
+    height: 30vh;
+    margin: 0 1.5vw 0 1.5vw;
+}
+
+.weekData {
+    position: relative;
+    margin: 0 1%;
+    float: left;
+    width: 8%;
+    height: 30vh;
+    background-color: rgba(213, 213, 213, 0.08);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.weekData p {
+    position: absolute;
+    font-size: 12px;
+    left: 50%;
+    font-weight: bold;
+    bottom: 4px;
+    margin: 0 0 0 0;
+    transform: translateX(-50%);
+}
+.Current-Phase2{
+    position: absolute;
+    top: 7%;
+    right: 3%;
+    width: 45%;
+    display: flex; /* establish flex container */
+    flex-direction: row; /* default value; can be omitted */
+    flex-wrap: nowrap; /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    background-color: rgba(213, 213, 213, 0.08);
+}
+.Current-Phase2 div h4, .Current-Phase2 div h2{
+    margin: 0;
+}
+.Current-Phase2 div h2 a, .Current div h2 a{
+    font-size: 12px;
+}
+.weekData:hover {
+    background-color: rgba(213, 213, 213, 0.4);
+}
+
+.Datelined {
+    border-radius: 5px;
+    width: 5px;
+    box-shadow: 0 10px 10px 10px rgba(213, 213, 213, 0.2);
+}
+
+.v1 {
+    border: solid orange;
+    background-color: orange;
+    height: 20%;
+}
+
+.v2 {
+    border: solid darkgray;
+    background-color: darkgray;
+    height: 30%;
+}
+
+.v3 {
+    border: solid #071E2C;
+    background-color: #071E2C;
+    height: 25%;
+}
+
+/************* - BOX THREE - ****************/
+.three {
+    width: 35%;
+    height: 42vh;
+    bottom: 0;
+    right: 0;
+}
+
+.Current {
+    position: absolute;
+    bottom: 3%;
+    width: 85%;
+    margin-left: 7.5%;
+    height: 8vh;
+    border-radius: 10px;
+    display: flex; /* establish flex container */
+    flex-direction: row; /* default value; can be omitted */
+    flex-wrap: nowrap; /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    background-color: rgba(213, 213, 213, 0.1);
+}
+
+.Current > div {
+    width: 100px;
+    height: 100%;
+    background-color: rgba(213, 213, 213, 0.02);
+}
+
+.Current div h4, .Current div h2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.box svg {
+    width: 45%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/**************** Dashboard ****************/
+#DashBox, #PowerBox, #settingBox, #analyseBox {
+    display: none;
+}
+/*******Box one**************/
+.chart {
+    position: absolute;
+    width: auto;
+    top: 2.5%;
+    height: auto;
+    left: 2.5%;
+    right: 2.5%;
+    bottom: 2.5%;
+}
+
+.Bo {
+    top: 35%;
+}
+
+.IIone {
+    position: relative;
+    width: 70%;
+    height: 90vh;
+}
+
+/*******Box two**************/
+.II-two {
+    background-color: rgba(207, 207, 207, 0.2);
+    width: 100%;
+    height: 90%;
+    bottom: 5%;
+    margin-top: 30px;
+    right: 0;
+    border-radius: 10px;
+}
+
+.IItwo h1, .IItwo h3 {
+    color: #757575;
+    margin: 0 0 0 5px;
+}
+
+.IItwo h3 {
+    font-weight: lighter;
+}
+
+.IItwo {
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    bottom: 5%;
+    right: 0;
+}
+
+.boxD {
+    position: relative;
+    margin-left: 5%;
+    width: 90%;
+    height: 15%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.first {
+    top: 12px;
+}
+
+.activeD div h3, .activeD div h3 {
+    color: white;
+}
+
+.activeD {
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: #071E2C;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.activeD div p {
+    color: rgba(255, 165, 0, 1);
+    font-weight: lighter;
+}
+
+.boxD:not(.activeD):hover {
+    background-color: rgba(207, 207, 207, 0.2);
+    border-radius: 10px;
+}
+
+.boxD svg path {
+    fill: #707070 !important;
+    stroke: none !important;
+}
+
+.activeD svg path {
+    fill: white !important;
+}
+
+.boxD div {
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+}
+
+.logosD {
+    width: auto;
+    height: 100%;
+    float: left;
+}
+
+.boxD h3 {
+    font-weight: bold;
+    color: #757575;
+}
+
+.boxD p {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.boxD h3, .boxD p {
+    margin: 0;
+}
+
+.graphs {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.II-two > hr {
+    margin-top: 0;
+    width: 50%;
+    border: 0.5px solid rgba(117, 117, 117, 0.25);
+}
+
+#first, .ghg {
+    display: block;
+}
+
+/**************** Powerbox ****************/
+
+#PowerBox .one {
+    background-color: #071E2C;
+}
+
+#PowerBox .two {
+    width: 100%;
+    background-color: transparent;
+}
+
+#PowerBox .two h1 {
+    margin: 20px 0 0 0;
+    color: #555555;
+}
+
+#PowerBox .two h3 {
+    margin-top: 0;
+    font-weight: lighter;
+    color: #999999;
+}
+
+.solars {
+    position: absolute;
+    width: 10%;
+    height: 30vh;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: rgba(134, 134, 134, 0.05);
+}
+
+.solars div {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.solars p {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.sp {
+    margin: 0 5%;
+}
+
+.to {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.solars div div {
+    flex-grow: 1;
+    width: 30%;
+    height: 33%;
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.solars:hover {
+    background: rgba(125, 125, 125, 0.15);
+}
+
+.panels {
+    color: orange;
+}
+
+.gi {
+    margin-left: 15%;
+}
+
+.gi2 {
+    margin-left: 30%;
+}
+
+.gi3 {
+    margin-left: 45%;
+}
+
+.gi4 {
+    margin-left: 60%;
+}
+
+.gi5 {
+    margin-left: 75%;
+}
+
+.gi6 {
+    margin-left: 90%;
+}
+
+.PowerStatus, .PowerDash {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    background-color: transparent;
+    top: 10%;
+    left: 4%;
+    bottom: 10%;
+}
+
+.power {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #EDEDED;
+}
+
+.PowerDash {
+    width: 65%;
+    left: unset;
+    right: 10px;
+    top: 5%;
+    bottom: 5%;
+}
+
+/******** only activ on click ******/
+.PowerDashFull {
+    width: 100%;
+    right: unset;
+}
+
+.PowerDashFull > .Dash {
+    height: 100%;
+    margin: unset;
+}
+
+.PowerDashFull .Dash:hover {
+    background: unset;
+    border-radius: unset;
+}
+
+.PowerDashFull .Dash .charts {
+    top: 20%;
+    bottom: 5%;
+    left: unset;
+    width: 97%;
+}
+
+.PowerDashFull .Dash h2 {
+    padding: 0 0 0 20px;
+}
+.PowerDashFull .Dash h4 {
+    padding: 0 0 0 20px;
+}
+.PowerDashButton {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 80px;
+    cursor: pointer;
+    height: 50px;
+    border-right: 6px solid orange;
+    color: white;
+    background: transparent;
+}
+.PowerDash .information{
+    display: none;
+}
+.PowerDashFull .information{
+    display: block;
+    position: absolute;
+    top: 0;
+    margin:0 0 0 20%;
+}
+.PowerDashFull .mi{
+    margin-left: 40%;
+}
+.PowerDashFull .nzxt{
+    margin-left: 60%;
+}
+/******** ------------------- ******/
+
+.Dash {
+    position: relative;
+    width: 100%;
+    height: 22%;
+    margin: 1% 0 1% 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.Dash:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));;
+    border-radius: 10px;
+}
+
+.charts {
+    position: absolute;
+    width: 75%;
+    top: 25%;
+    height: auto;
+    left: 21%;
+    right: 0;
+    bottom: 25%;
+}
+
+.Dash h2 {
+    padding-top: 2%;
+    margin: 0 0 0 20px;
+    color: white;
+}
+
+.Dash h4 {
+    font-weight: lighter;
+    margin: 0 0 0 20px;
+    color: white;
+}
+
+.line-Power {
+    position: absolute;
+    transform: rotate(180deg);
+    left: 60%;
+    width: 6px;
+    height: 100%;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+.sec {
+    left: 65%;
+}
+
+.line-Power-color {
+    height: 30%;
+    border-radius: 6px;
+    background-color: orange;
+}
+
+.gh {
+    height: 70%;
+    background-color: #3498db;
+}
+
+/****************************** analysebox *****************************************/
+.bj {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#analyseBox .II-two {
+    height: 50%;
+}
+
+#analyseBox .II-two .boxD {
+    height: 30%;
+}
+
+.Work {
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #071E2C;
+    width: 100%;
+    height: 35%;
+    pointer-events: none;
+}
+
+.Work .boxD h3 {
+    color: white;
+}
+
+.Work hr {
+    width: 20%;
+    border-radius: 1px;
+    border: 0.5px solid white;
+    margin: 5px 0 5px 30%;
+}
+
+.Work .first {
+    top: 0;
+}
+
+.Work .boxD {
+    height: 30%;
+}
+
+.analyseBoxes {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: white;
+    height: 40vh;
+}
+/****************************** settingbox *****************************************/
+
+.sett {
+    width: 65%;
+    height: 40vh;
+    position: relative;
+}
+
+.sett2 {
+    width: 65%;
+    height: 45vh;
+    bottom: 0;
+}
+
+.sett3 {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    right: 0;
+}
+
+.profile-Pic {
+    width: 100%;
+    height: 150px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: url("IMG-1946K.jpg");
+    background-size: cover;
+}
+
+.profile {
+    width: auto;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 75px;
+    background-color: rgba(207, 207, 207, 0.31);
+}
+
+.pp, .pp2 {
+    font-weight: bold;
+    margin-top: 0;
+    margin-left: 20px;
+    padding-top: 30px;
+}
+
+.pp2 {
+    padding-top: 19px;
+}
+
+.profileHeader {
+    position: absolute;
+    left: 20px;
+}
+
+.sett2 div .profile, .sett div .profile {
+    position: relative;
+    height: 6vh;
+}
+
+.sett div .profile {
+    height: 9vh;
+}
+
+.sett2 div, .sett div {
+    bottom: 5px;
+    width: auto;
+    left: 0;
+    right: 0;
+    height: 80%;
+    position: absolute;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+    /******* Menu Bar ************/
+    .SearchBar {
+        width: 10%;
+        height: 100vh;
+        background-color: transparent;
+        color: black;
+        box-shadow: rgba(0, 0, 0, 0.3);
+        border-right: 1px solid #d6d6d6;
+    }
+
+    .menu p {
+        display: none;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .logos {
+        margin-left: 45%;
+        transform: translateX(-45%);
+    }
+
+    /************* Master Box ****************/
+    #HomeBox {
+        position: absolute;
+        width: 85%;
+        height: 90%;
+        top: 5%;
+        right: 2.5%;
+    }
+
+    #DashBox, #PowerBox, #analyseBox {
+        width: 85%;
+    }
+
+    .greyText {
+        font-size: 12px;
+    }
+
+    .boxesLine {
+        width: 50%;
+    }
+
+    .weekData p {
+        font-size: 12px;
+    }
+}
+

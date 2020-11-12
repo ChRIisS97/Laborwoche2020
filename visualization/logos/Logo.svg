@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Logo);
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        fill: #ff9100;
+      }
+
+      .cls-2 {
+        opacity: 0.17;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #707070;
+      }
+
+      .cls-4 {
+        opacity: 0.4;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        fill: rgba(237,237,237,0);
+      }
+
+      .cls-8 {
+        filter: url(#Rechteck_1550);
+      }
+
+      .cls-9 {
+        filter: url(#Rechteck_1549);
+      }
+
+      .cls-10 {
+        filter: url(#Rechteck_1548);
+      }
+
+      .cls-11 {
+        filter: url(#Rechteck_1547);
+      }
+
+      .cls-12 {
+        filter: url(#Pfad_402);
+      }
+
+      .cls-13 {
+        filter: url(#Pfad_401);
+      }
+
+      .cls-14 {
+        filter: url(#Pfad_400);
+      }
+
+      .cls-15 {
+        filter: url(#Pfad_403);
+      }
+    </style>
+    <filter id="Pfad_403" x="-16.825" y="-14.691" width="188.296" height="188.296" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#f70" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_400" x="-9.92" y="-10.443" width="171.075" height="159.887" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#f70" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_401" x="2.531" y="2.392" width="138.365" height="126.966" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#f70" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_402" x="-14.306" y="-14.679" width="152.809" height="147.516" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-color="#f70" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1547" x="22" y="93" width="81" height="39" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1548" x="22" y="67" width="81" height="39" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1549" x="22" y="41" width="81" height="39" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rechteck_1550" x="22" y="14" width="81" height="39" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Logo">
+      <rect width="140" height="140"/>
+    </clipPath>
+  </defs>
+  <g id="Logo" class="cls-1">
+    <rect class="cls-7" width="140" height="140"/>
+    <g class="cls-15" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="Pfad_403-2" data-name="Pfad 403" class="cls-2" d="M89.191,2.3a10.786,10.786,0,0,1,8.584,5.112l28.956,46.469a9.8,9.8,0,0,1,.42,10.007L102,108.089a8.854,8.854,0,0,1-8.184,4.409L39.137,110.2a10.786,10.786,0,0,1-8.584-5.112L1.6,58.624a9.8,9.8,0,0,1-.42-10.007l25.153-44.2A8.854,8.854,0,0,1,34.516.009Z" transform="translate(71.73 -8.69) rotate(45)"/>
+    </g>
+    <path id="Pfad_305" data-name="Pfad 305" class="cls-3" d="M0,0" transform="matrix(0.966, -0.259, 0.259, 0.966, 44.713, 42.854)"/>
+    <g class="cls-14" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="Pfad_400-2" data-name="Pfad 400" class="cls-2" d="M89.191,2.3a10.786,10.786,0,0,1,8.584,5.112l28.956,46.469a9.8,9.8,0,0,1,.42,10.007L102,108.089a8.854,8.854,0,0,1-8.184,4.409L39.137,110.2a10.786,10.786,0,0,1-8.584-5.112L1.6,58.624a9.8,9.8,0,0,1-.42-10.007l25.153-44.2A8.854,8.854,0,0,1,34.516.009Z" transform="matrix(0.97, 0.26, -0.26, 0.97, 28.2, -4.44)"/>
+    </g>
+    <g class="cls-13" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="Pfad_401-2" data-name="Pfad 401" class="cls-4" d="M83.761,1.9A10.35,10.35,0,0,1,92.123,7.03l26.685,44.5a10.362,10.362,0,0,1,.366,10.279L95.588,104.435a8.7,8.7,0,0,1-8.019,4.525L36.6,107.069a10.35,10.35,0,0,1-8.362-5.133L1.558,57.441a10.362,10.362,0,0,1-.366-10.279L24.777,4.531A8.7,8.7,0,0,1,32.8.006Z" transform="translate(11.53 8.39)"/>
+    </g>
+    <g class="cls-12" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="Pfad_402-2" data-name="Pfad 402" class="cls-5" d="M78.137,1.018a9.781,9.781,0,0,1,8.174,5.1l23.9,41.957a10.785,10.785,0,0,1,.21,10.389L88.2,99.417a8.838,8.838,0,0,1-7.975,4.748l-46.708-1.016a9.781,9.781,0,0,1-8.174-5.1L1.442,56.092A10.786,10.786,0,0,1,1.232,45.7L23.454,4.75A8.838,8.838,0,0,1,31.428,0Z" transform="matrix(0.97, -0.26, 0.26, 0.97, -5.31, 20.22)"/>
+    </g>
+    <g class="cls-11" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1547-2" data-name="Rechteck 1547" class="cls-6" width="63" height="21" rx="2" transform="translate(31 99)"/>
+    </g>
+    <g class="cls-10" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1548-2" data-name="Rechteck 1548" class="cls-6" width="63" height="21" rx="2" transform="translate(31 73)"/>
+    </g>
+    <g class="cls-9" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1549-2" data-name="Rechteck 1549" class="cls-6" width="63" height="21" rx="2" transform="translate(31 47)"/>
+    </g>
+    <g class="cls-8" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rechteck_1550-2" data-name="Rechteck 1550" class="cls-6" width="63" height="21" rx="2" transform="translate(31 20)"/>
+    </g>
+  </g>
+</svg>
